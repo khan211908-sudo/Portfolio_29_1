@@ -286,6 +286,11 @@
       margin-top: 1rem; transition: background 0.2s;
     }
     .p-card:hover .p-card-arrow { background: var(--rose); border-color: var(--rose); }
+    .project-link{
+  text-decoration:none;
+  color:inherit;
+  display:block;
+}
 
     /* card color fills */
     .fill-1 { background: linear-gradient(135deg, #8C7B6E, #C9A89B); }
