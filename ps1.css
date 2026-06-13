@@ -1,0 +1,97 @@
+.project-hero{
+    padding:140px 4rem 6rem;
+    background:var(--light-rose);
+}
+
+.project-hero h1{
+    font-family:'Playfair Display',serif;
+    font-size:4rem;
+    margin-bottom:1rem;
+}
+
+.project-tag{
+    text-transform:uppercase;
+    letter-spacing:.15em;
+    color:var(--rose);
+    font-size:.75rem;
+}
+
+.project-hero p{
+    max-width:800px;
+    line-height:1.8;
+    margin-top:1rem;
+}
+
+.project-meta{
+    display:flex;
+    gap:4rem;
+    margin-top:3rem;
+}
+
+.project-gallery{
+    padding:6rem 4rem;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:2rem;
+    margin-top:3rem;
+}
+
+.gallery-card{
+    background:white;
+    padding:1.5rem;
+}
+
+.gallery-image{
+    height:350px;
+    background:#ddd;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:1rem;
+}
+
+.gallery-card h3{
+    margin-bottom:.8rem;
+}
+
+.gallery-card p{
+    line-height:1.8;
+    color:var(--stone);
+}
+
+.project-faq{
+    padding:6rem 4rem;
+    background:var(--light-rose);
+}
+
+.faq-item{
+    margin-bottom:2rem;
+    padding-bottom:2rem;
+    border-bottom:1px solid rgba(0,0,0,.1);
+}
+
+.faq-item h3{
+    margin-bottom:.8rem;
+}
+
+.faq-item p{
+    line-height:1.8;
+    color:var(--stone);
+}
+
+.project-footer{
+    padding:2rem 4rem;
+    background:var(--charcoal);
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.project-footer a{
+    color:var(--rose);
+    text-decoration:none;
+}
