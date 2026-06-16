@@ -1,8 +1,12 @@
 .project-hero{
-    padding:140px 4rem 6rem;
-    background:var(--light-rose);
+    padding:160px 4rem 8rem;
+    background: linear-gradient(
+        135deg,
+        #f6f1ed 0%,
+        #e8ddd6 50%,
+        #d9c5bb 100%
+    );
 }
-
 .project-hero h1{
     font-family:'Playfair Display',serif;
     font-size:4rem;
@@ -42,15 +46,40 @@
 .gallery-card{
     background:white;
     padding:1.5rem;
+    border-radius:20px;
+    overflow:hidden;
+    transition:all .4s ease;
+    box-shadow:
+      0 10px 30px rgba(0,0,0,.05);
 }
+
+.gallery-card:hover{
+    transform:translateY(-10px);
+    box-shadow:
+      0 25px 50px rgba(0,0,0,.12);
+}
+
 
 .gallery-image{
     height:350px;
-    background:#ddd;
+
+    background:
+      linear-gradient(
+        135deg,
+        #d8c7bf,
+        #bfa89b
+      );
+
+    border-radius:15px;
+
     display:flex;
     align-items:center;
     justify-content:center;
-    margin-bottom:1rem;
+
+    color:white;
+    font-size:.8rem;
+    letter-spacing:.15em;
+    text-transform:uppercase;
 }
 
 .gallery-card h3{
@@ -61,6 +90,12 @@
     line-height:1.8;
     color:var(--stone);
 }
+.gallery-card{
+    cursor:pointer;
+}
+.gallery-card:hover h3{
+    color:var(--rose);
+}
 
 .project-faq{
     padding:6rem 4rem;
@@ -68,9 +103,11 @@
 }
 
 .faq-item{
-    margin-bottom:2rem;
-    padding-bottom:2rem;
-    border-bottom:1px solid rgba(0,0,0,.1);
+    background:white;
+    padding:2rem;
+    border-radius:18px;
+    margin-bottom:1.5rem;
+    border:none;
 }
 
 .faq-item h3{
