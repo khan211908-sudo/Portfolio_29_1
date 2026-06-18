@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="ps1.css">
+<link rel="stylesheet" href="ps2.css">
     <title>Document</title>
 </head>
 <body>
@@ -26,41 +26,57 @@
 
 </div>
 <!-- Hero Section -->
- <section class="project-hero">
+<section class="project-hero">
 
+  <!-- Background Image -->
+  <div class="hero-bg"></div>
+
+  <!-- Content -->
   <div class="project-hero-content">
-    <span class="project-tag">Fashion Design Project</span>
 
-    <h1>Luxury Evening Wear Collection</h1>
+    <span class="project-tag">
+      Draping Studio Project
+    </span>
+
+    <h1>
+      Draping:<br>
+      From Concept<br>
+      to Form
+    </h1>
 
     <p>
-      This project explores contemporary evening wear through
-      elegant silhouettes, premium fabric selection, and refined
-      garment construction techniques. The collection focuses on
-      balancing modern aesthetics with timeless sophistication.
+      This project explores the art of draping through
+      fabric manipulation, silhouette experimentation, and
+      three-dimensional form development. The process focuses
+      on shaping fabric directly on the dress form to create
+      balanced, expressive, and visually engaging designs.
     </p>
 
     <div class="project-meta">
+
       <div>
-        <h4>Category</h4>
-        <p>Fashion Design</p>
+        <h4>Module</h4>
+        <p>Draping Studio</p>
       </div>
 
       <div>
-        <h4>Duration</h4>
-        <p>6 Weeks</p>
+        <h4>Work Type</h4>
+        <p>Academic Projects</p>
       </div>
 
       <div>
-        <h4>Year</h4>
-        <p>2025</p>
+        <h4>Focus</h4>
+        <p>Form & Silhouette</p>
       </div>
+
     </div>
+
   </div>
 
 </section>
-<!-- Gallery Section -->
- <section class="project-gallery">
+</section>>
+ <!-- Gallery Section -->
+<section class="project-gallery">
 
   <div class="section-label">
     Project Showcase
@@ -70,118 +86,146 @@
     Design Development & Final Outcomes
   </h2>
 
-  <div class="gallery-grid">
+  <div class="carousel-wrapper">
 
-    <div class="gallery-card">
+    <button class="carousel-btn prev" onclick="changeSlide(-1)">
+      ←
+    </button>
 
-      <div class="gallery-image">
-        PHOTO 01
+    <div class="gallery-grid">
+
+      <div class="gallery-card active">
+
+        <div class="gallery-image">
+          <img src="Draping/1.jpeg" alt="Draping project image 1">
+        </div>
+
+        <h3>Research & Inspiration Board</h3>
+
+        <p>
+          Initial mood board exploring textures, colour palettes,
+          cultural references, and trend forecasting.
+        </p>
+
       </div>
 
-      <h3>Research & Inspiration Board</h3>
+      <div class="gallery-card">
 
-      <p>
-        Initial mood board exploring textures, colour palettes,
-        cultural references, and trend forecasting.
-      </p>
+        <div class="gallery-image">
+          <img src="Draping/2.jpeg" alt="Draping project image 2">
+        </div>
+
+        <h3>Concept Development</h3>
+
+        <p>
+          Early design sketches and silhouette experimentation
+          developed during the concept phase.
+        </p>
+
+      </div>
+
+      <div class="gallery-card">
+
+        <div class="gallery-image">
+          <img src="Draping/3.jpeg" alt="Draping project image 3">
+        </div>
+
+        <h3>Technical Drawings</h3>
+
+        <p>
+          Detailed garment specifications and construction planning.
+        </p>
+
+      </div>
+
+      <div class="gallery-card">
+
+        <div class="gallery-image">
+          <img src="Draping/6.jpeg" alt="Draping project image 4">
+        </div>
+
+        <h3>Initial Draping Experiment</h3>
+
+        <p>
+          Exploring silhouette and volume through
+          free-form draping techniques.
+        </p>
+
+      </div>
+
+      <div class="gallery-card">
+
+        <div class="gallery-image">
+          <img src="Draping/5.jpeg" alt="Draping project image 5">
+        </div>
+
+        <h3>Draping Refinement</h3>
+
+        <p>
+          Refining proportions and developing
+          stronger garment structure.
+        </p>
+
+      </div>
+
+      <div class="gallery-card">
+
+        <div class="gallery-image">
+          <img src="Draping/Cover photo.jpeg" alt="Draping project image 6">
+        </div>
+
+        <h3>Final Garment</h3>
+
+        <p>
+          Completed design showcasing fabric application,
+          craftsmanship, and styling decisions.
+        </p>
+
+      </div>
 
     </div>
 
-    <div class="gallery-card">
-
-      <div class="gallery-image">
-        PHOTO 02
-      </div>
-
-      <h3>Concept Development</h3>
-
-      <p>
-        Early design sketches and silhouette experimentation
-        developed during the concept phase.
-      </p>
-
-    </div>
-
-    <div class="gallery-card">
-
-      <div class="gallery-image">
-        PHOTO 03
-      </div>
-
-      <h3>Technical Drawings</h3>
-
-      <p>
-        Detailed garment specifications and construction planning.
-      </p>
-
-    </div>
-
-    <div class="gallery-card">
-
-      <div class="gallery-image">
-        PHOTO 04
-      </div>
-
-      <h3>Final Garment</h3>
-
-      <p>
-        Completed design showcasing fabric application,
-        craftsmanship, and styling decisions.
-      </p>
-
-    </div>
+    <button class="carousel-btn next" onclick="changeSlide(1)">
+      →
+    </button>
 
   </div>
 
 </section>
 <!-- FAQ Section -->
-<section class="project-faq">
+<section class="faq-section">
+  <div class="section-label">Project Insights</div>
+  <h2 class="section-heading">Frequently<br><em>Asked Questions</em></h2>
 
-  <div class="section-label">
-    Frequently Asked Questions
-  </div>
+  <div class="faq-grid">
 
-  <h2 class="section-heading">
-    Project Insights
-  </h2>
-
-  <div class="faq-container">
-
-    <div class="faq-item">
-      <h3>What was the aim of this project?</h3>
-      <p>
-        The objective was to create a fashion collection that
-        combines contemporary design with luxury craftsmanship.
-      </p>
+    <div class="faq-card">
+      <div class="faq-card-icon">I</div>
+      <h3>What is draping in fashion design?</h3>
+      <p>Draping is a design technique where fabric is arranged directly on a dress form to explore shape, volume, and garment structure before creating flat patterns.</p>
     </div>
 
-    <div class="faq-item">
-      <h3>Which software was used?</h3>
-      <p>
-        Adobe Illustrator, Photoshop, and digital mood board tools
-        were used throughout the design process.
-      </p>
+    <div class="faq-card">
+      <div class="faq-card-icon">II</div>
+      <h3>What was the purpose of these draping assignments?</h3>
+      <p>These assignments were developed to deepen understanding of fabric behaviour, silhouette development, and three-dimensional garment construction through practical experimentation.</p>
     </div>
 
-    <div class="faq-item">
-      <h3>What design process was followed?</h3>
-      <p>
-        Research, concept development, material exploration,
-        technical planning, and final execution.
-      </p>
+    <div class="faq-card">
+      <div class="faq-card-icon">III</div>
+      <h3>What skills were demonstrated in this work?</h3>
+      <p>The projects showcase skills in fabric manipulation, creative draping techniques, design development, visual balance, and considered garment presentation.</p>
     </div>
 
-    <div class="faq-item">
-      <h3>What skills were demonstrated?</h3>
-      <p>
-        Fashion illustration, garment development, textile
-        selection, technical drawing, and visual presentation.
-      </p>
+    <div class="faq-card">
+      <div class="faq-card-icon">IV</div>
+      <h3>What challenges were encountered during the process?</h3>
+      <p>Working with different fabric weights and achieving balanced proportions required continuous experimentation and refinement throughout the design process.</p>
     </div>
 
   </div>
-
 </section>
+
 <!-- Footer -->
  <footer class="project-footer">
 
@@ -194,5 +238,34 @@
   </a>
 
 </footer>
+<script>
+
+const slides =
+document.querySelectorAll(".gallery-card");
+
+let currentSlide = 0;
+
+slides[currentSlide].classList.add("active");
+
+function changeSlide(direction){
+
+    slides[currentSlide]
+    .classList.remove("active");
+
+    currentSlide += direction;
+
+    if(currentSlide < 0){
+        currentSlide = slides.length - 1;
+    }
+
+    if(currentSlide >= slides.length){
+        currentSlide = 0;
+    }
+
+    slides[currentSlide]
+    .classList.add("active");
+}
+
+</script>
 </body>
 </html>
