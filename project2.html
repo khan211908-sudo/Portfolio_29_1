@@ -74,9 +74,9 @@
   </div>
 
 </section>
-</section>
-<!-- Gallery Section -->
- <section class="project-gallery">
+</section>>
+ <!-- Gallery Section -->
+<section class="project-gallery">
 
   <div class="section-label">
     Project Showcase
@@ -86,90 +86,108 @@
     Design Development & Final Outcomes
   </h2>
 
-  <div class="gallery-grid">
+  <div class="carousel-wrapper">
 
-    <div class="gallery-card">
+    <button class="carousel-btn prev" onclick="changeSlide(-1)">
+      ←
+    </button>
 
-      <div class="gallery-image">
-        <img src="Draping/1.jpeg" alt="Draping project image 1">
+    <div class="gallery-grid">
+
+      <div class="gallery-card active">
+
+        <div class="gallery-image">
+          <img src="Draping/1.jpeg" alt="Draping project image 1">
+        </div>
+
+        <h3>Research & Inspiration Board</h3>
+
+        <p>
+          Initial mood board exploring textures, colour palettes,
+          cultural references, and trend forecasting.
+        </p>
+
       </div>
 
-      <h3>Research & Inspiration Board</h3>
+      <div class="gallery-card">
 
-      <p>
-        Initial mood board exploring textures, colour palettes,
-        cultural references, and trend forecasting.
-      </p>
+        <div class="gallery-image">
+          <img src="Draping/2.jpeg" alt="Draping project image 2">
+        </div>
+
+        <h3>Concept Development</h3>
+
+        <p>
+          Early design sketches and silhouette experimentation
+          developed during the concept phase.
+        </p>
+
+      </div>
+
+      <div class="gallery-card">
+
+        <div class="gallery-image">
+          <img src="Draping/3.jpeg" alt="Draping project image 3">
+        </div>
+
+        <h3>Technical Drawings</h3>
+
+        <p>
+          Detailed garment specifications and construction planning.
+        </p>
+
+      </div>
+
+      <div class="gallery-card">
+
+        <div class="gallery-image">
+          <img src="Draping/6.jpeg" alt="Draping project image 4">
+        </div>
+
+        <h3>Initial Draping Experiment</h3>
+
+        <p>
+          Exploring silhouette and volume through
+          free-form draping techniques.
+        </p>
+
+      </div>
+
+      <div class="gallery-card">
+
+        <div class="gallery-image">
+          <img src="Draping/5.jpeg" alt="Draping project image 5">
+        </div>
+
+        <h3>Draping Refinement</h3>
+
+        <p>
+          Refining proportions and developing
+          stronger garment structure.
+        </p>
+
+      </div>
+
+      <div class="gallery-card">
+
+        <div class="gallery-image">
+          <img src="Draping/Cover photo.jpeg" alt="Draping project image 6">
+        </div>
+
+        <h3>Final Garment</h3>
+
+        <p>
+          Completed design showcasing fabric application,
+          craftsmanship, and styling decisions.
+        </p>
+
+      </div>
 
     </div>
 
-    <div class="gallery-card">
-
-      <div class="gallery-image">
-       <img src="Draping/2.jpeg" alt="Draping project image 2">
-      </div>
-
-      <h3>Concept Development</h3>
-
-      <p>
-        Early design sketches and silhouette experimentation
-        developed during the concept phase.
-      </p>
-
-    </div>
-
-    <div class="gallery-card">
-
-      <div class="gallery-image">
-        <img src="Draping/3.jpeg" alt="Draping Project image 3">
-      </div>
-
-      <h3>Technical Drawings</h3>
-
-      <p>
-        Detailed garment specifications and construction planning.
-      </p>
-
-    </div>
-    <div class="gallery-card">
-   <div class="gallery-image">
-      <img src="Draping/6.jpeg" alt="Drapping project image 4">
-   </div>
-
-   <h3>Initial Draping Experiment</h3>
-
-   <p>
-      Exploring silhouette and volume through
-      free-form draping techniques.
-   </p>
-</div>
-<div class="gallery-card">
-   <div class="gallery-image">
-      <img src="Draping/5.jpeg" alt="Draping project image 5">
-   </div>
-
-   <h3>Initial Draping Experiment</h3>
-
-   <p>
-      Exploring silhouette and volume through
-      free-form draping techniques.
-   </p>
-</div>
-
-    <div class="gallery-card">
-
-      <div class="gallery-image">
-        <img src="Draping/Cover photo.jpeg" alt="Draping project image 6">
-      </div>
-
-      <h3>Final Garment</h3>
-
-      <p>
-        Completed design showcasing fabric application,
-        craftsmanship, and styling decisions.
-      </p>
-
-    </div>
+    <button class="carousel-btn next" onclick="changeSlide(1)">
+      →
+    </button>
 
   </div>
 
@@ -207,6 +225,7 @@
 
   </div>
 </section>
+
 <!-- Footer -->
  <footer class="project-footer">
 
@@ -219,5 +238,34 @@
   </a>
 
 </footer>
+<script>
+
+const slides =
+document.querySelectorAll(".gallery-card");
+
+let currentSlide = 0;
+
+slides[currentSlide].classList.add("active");
+
+function changeSlide(direction){
+
+    slides[currentSlide]
+    .classList.remove("active");
+
+    currentSlide += direction;
+
+    if(currentSlide < 0){
+        currentSlide = slides.length - 1;
+    }
+
+    if(currentSlide >= slides.length){
+        currentSlide = 0;
+    }
+
+    slides[currentSlide]
+    .classList.add("active");
+}
+
+</script>
 </body>
 </html>

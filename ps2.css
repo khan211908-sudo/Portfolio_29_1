@@ -153,96 +153,196 @@
     margin-top:3rem;
 }
 
+/* =========================
+   GALLERY CAROUSEL
+========================= */
+
 .project-gallery{
     padding:6rem 4rem;
 }
 
-.gallery-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
+.carousel-wrapper{
+    position:relative;
+    max-width:900px;
+    margin:4rem auto 0;
 }
+
 .gallery-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:2rem;
-    margin-top:4rem;
-}
-.gallery-card{
-    background:white;
-    padding:1.5rem;
-    border-radius:20px;
+    position:relative;
     overflow:hidden;
-    transition:all .4s ease;
+}
+
+.gallery-card{
+    display:none;
+
+    background:white;
+
+    padding:1.5rem;
+
+    border-radius:20px;
+
     box-shadow:
-      0 10px 30px rgba(0,0,0,.05);
-}
-.gallery-card p{
-    color:var(--stone);
-    line-height:1.8;
+    0 15px 40px rgba(0,0,0,.08);
+
+    animation:fadeSlide .5s ease;
 }
 
-.gallery-card:hover{
-    transform:translateY(-10px);
-    box-shadow:
-      0 25px 50px rgba(0,0,0,.12);
-}
-
-
-.gallery-image{
-    height:350px;
-
-    background:
-      linear-gradient(
-        135deg,
-        #d8c7bf,
-        #bfa89b
-      );
-
-    border-radius:15px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    color:white;
-    font-size:.8rem;
-    letter-spacing:.15em;
-    text-transform:uppercase;
-}
-.gallery-image{
-    margin-bottom:1rem;
-}
-.gallery-image img{
-    width:100%;
-    height:350px;
-    object-fit:cover;
-    border-radius:15px;
+.gallery-card.active{
     display:block;
 }
 
+.gallery-image{
+    width:100%;
+    height:600px;
 
+    margin-bottom:1.5rem;
+
+    border-radius:15px;
+
+    overflow:hidden;
+}
+
+.gallery-image img{
+    width:100%;
+    height:100%;
+
+    object-fit:contain;
+
+    display:block;
+
+    border-radius:15px;
+}
 
 .gallery-card h3{
-    margin-top:0;
-    margin-bottom:0.8rem;
+    margin-bottom:.8rem;
+
     color:var(--charcoal);
+
     font-family:'Playfair Display', serif;
+
+    font-size:1.8rem;
 }
 
 .gallery-card p{
-    line-height:1.8;
     color:var(--stone);
-}
-.gallery-card{
-    background:white;
-    padding:1.5rem;
-    border-radius:20px;
-    overflow:hidden;
-}
-.gallery-card:hover h3{
-    color:var(--rose);
+
+    line-height:1.8;
+
+    max-width:700px;
 }
 
+/* =========================
+   ARROWS
+========================= */
+
+.carousel-btn{
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:60px;
+    height:60px;
+
+    border:none;
+    border-radius:50%;
+
+    background:var(--rose);
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:1.5rem;
+
+    z-index:10;
+
+    transition:all .3s ease;
+}
+
+.carousel-btn:hover{
+    transform:
+    translateY(-50%)
+    scale(1.08);
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.15);
+}
+
+.prev{
+    left:-90px;
+}
+
+.next{
+    right:-90px;
+}
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes fadeSlide{
+
+    from{
+        opacity:0;
+        transform:translateX(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width:1000px){
+
+    .carousel-wrapper{
+        max-width:100%;
+    }
+
+    .prev{
+        left:10px;
+    }
+
+    .next{
+        right:10px;
+    }
+
+    .gallery-image{
+        height:450px;
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width:768px){
+
+    .project-gallery{
+        padding:4rem 1.5rem;
+    }
+
+    .gallery-image{
+        height:320px;
+    }
+
+    .gallery-card h3{
+        font-size:1.4rem;
+    }
+
+    .carousel-btn{
+        width:45px;
+        height:45px;
+
+        font-size:1.1rem;
+    }
+}
 .project-faq{
     padding:6rem 4rem;
     background:var(--light-rose);
