@@ -401,22 +401,3 @@
     color:var(--rose);
     text-decoration:none;
 }
-.process-image{
-    width:100%;
-    height:220px;
-    overflow:hidden;
-    border-radius:16px;
-    margin-bottom:1.5rem;
-}
-
-.process-image img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    display:block;
-    transition:transform .5s ease;
-}
-
-.process-card:hover .process-image img{
-    transform:scale(1.05);
-}
